@@ -69,7 +69,7 @@ export default {
     return {
       accessToken:
         "pk.eyJ1IjoieWlkZGlzaGUta29wIiwiYSI6ImNrNXR2M24ybjA5ZmUzbG96ZnEzNTNsM3YifQ.YiOjCiSZKFunicAXXnQMHg",
-      mapStyle: "mapbox://styles/mapbox/light-v10",
+      mapStyle: "mapbox://styles/yiddishe-kop/ck5u55bts2ktt1inw5c0s0b89",
       center: [35.234307186140086, 31.776628302133233], // The Kosel
       zoom: 17,
       pitch: 45,
@@ -100,6 +100,12 @@ export default {
     height: calc(100vh - 70px);
   }
   svg.icon {
+    .primary {
+      @apply text-gray-500;
+    }
+    .secondary {
+      @apply text-gray-300;
+    }
     height: 34px;
   }
 }
