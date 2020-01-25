@@ -46,7 +46,8 @@ export default {
 <style lang="scss">
 header {
   height: 70px;
-  @apply mb-12 px-6 flex justify-between items-center bg-white shadow;
+  z-index: 99;
+  @apply relative px-6 flex justify-between items-center bg-gray-800 shadow;
 
   .nav {
     @apply flex items-center;

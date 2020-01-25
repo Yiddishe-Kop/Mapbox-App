@@ -1,39 +1,38 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" class="mx-auto" />
-    <h1>Home Page</h1>
-    <grid align="flex-start" justify="flex-start" class="my-4 -mx-3">
-      <listing v-for="apt in listings" :key="apt.id" :apt="apt.data" :id="apt.id" />
-    </grid>
+    <div class="coordinates">{{coordinates}}</div>
+    <Sidebar />
+    <Map @mapdata="e => coordinates = e.coordinates" />
   </div>
 </template>
 
 <script>
-import Grid from "@/components/UI/Grid";
-import Listing from "@/components/Listing";
+import Sidebar from "@/components/Sidebar";
+import Map from "@/components/Map";
 
 export default {
   name: "home",
-  components: { Grid, Listing },
+  components: { Map, Sidebar },
   data() {
     return {
-      listings: []
+      coordinates: undefined
     };
   },
-  methods: {
-    fetchInitialData() {
-      this.$store.state.firebase.db
-        .collection("apartments")
-        .get()
-        .then(docs => {
-          docs.forEach(doc => {
-            this.listings.push({ id: doc.id, data: doc.data() });
-          });
-        });
-    }
-  },
+  methods: {},
   mounted() {
-    this.fetchInitialData();
+    console.log({ Map });
   }
 };
 </script>
+
+<style lang="scss">
+.home {
+  flex: 1;
+  display: flex;
+
+  .coordinates {
+    position: absolute;
+    z-index: 999;
+  }
+}
+</style>

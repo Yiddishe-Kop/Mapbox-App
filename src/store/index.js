@@ -10,6 +10,7 @@ export default new Vuex.Store({
 
     user: null,
     firebase: firebase,
+    map: null,
 
     modal: {
       isOpen: false,

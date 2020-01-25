@@ -24,10 +24,10 @@ p {
 }
 
 a {
-  @apply text-gray-800;
+  @apply text-gray-600;
   transition: all 0.25s ease;
   &:hover {
-    color: var(--brand);
+    @apply text-brand;
   }
 }
 

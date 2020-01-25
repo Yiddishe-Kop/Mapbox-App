@@ -1,11 +1,9 @@
 <template>
   <div id="app" class="bg-gray-200">
     <app-header />
-    <main>
-      <transition name="page" mode="out-in" appear>
-        <router-view />
-      </transition>
-    </main>
+    <transition name="page" mode="out-in" appear>
+      <router-view />
+    </transition>
 
     <Modal
       :is-open="modal.isOpen"
@@ -53,9 +51,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-main {
+.container {
   max-width: 860px;
   margin: 0 auto;
   padding-left: 20px;
