@@ -49,6 +49,10 @@
       touch-action: none;
 }
 
+canvas.mapboxgl-canvas {
+  left: 0px !important;
+}
+
 .mapboxgl-ctrl-top-left,
 .mapboxgl-ctrl-top-right,
 .mapboxgl-ctrl-bottom-left,
