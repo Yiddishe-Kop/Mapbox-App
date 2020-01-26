@@ -68,7 +68,7 @@ export default {
   data() {
     return {
       accessToken:
-        "pk.eyJ1IjoieWlkZGlzaGUta29wIiwiYSI6ImNrNXR2M24ybjA5ZmUzbG96ZnEzNTNsM3YifQ.YiOjCiSZKFunicAXXnQMHg",
+        process.env.VUE_APP_MAPBOX_API_KEY,
       mapStyle: "mapbox://styles/yiddishe-kop/ck5u55bts2ktt1inw5c0s0b89",
       center: [35.234307186140086, 31.776628302133233], // The Kosel
       zoom: 17,
