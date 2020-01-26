@@ -48,7 +48,6 @@ import {
 } from "vue-mapbox";
 import Icon from "@/components/UI/Icon";
 import Card from "@/components/UI/Card";
-import "@/assets/mapbox.scss";
 import markers from "@/utils/markers";
 
 export default {
@@ -67,8 +66,7 @@ export default {
   },
   data() {
     return {
-      accessToken:
-        process.env.VUE_APP_MAPBOX_API_KEY,
+      accessToken: process.env.VUE_APP_MAPBOX_API_KEY,
       mapStyle: "mapbox://styles/yiddishe-kop/ck5u55bts2ktt1inw5c0s0b89",
       center: [35.234307186140086, 31.776628302133233], // The Kosel
       zoom: 17,

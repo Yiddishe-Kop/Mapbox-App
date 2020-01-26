@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,600,700,800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --brand: #e05d04;
+}
+
+body input {
+  font-family: "Fira Sans", sans-serif;
+}
+
+h1 {
+  font-weight: 600;
+  @apply text-2xl tracking-widest uppercase;
+}
+
+p {
+  margin-bottom: 6px;
+}
+
+a {
+  @apply text-gray-600;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+a:hover {
+  @apply text-brand;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.page-enter-active,
+.page-leave-active {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.page-enter,
+.page-leave-to {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  opacity: 0;
+}
+/*# sourceMappingURL=global.css.map */

@@ -7,6 +7,11 @@ module.exports = {
         './src/**/*.vue',
         './public/index.html',
       ],
+      css: [
+        './src/assets/global.scss',
+        './src/*.vue',
+        './src/**/*.vue',
+      ],
       defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
     })
   ]
